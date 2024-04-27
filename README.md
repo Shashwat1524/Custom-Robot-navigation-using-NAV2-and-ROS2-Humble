@@ -6,17 +6,12 @@ This project demonstrates custom robot navigation using ROS2 Humble and NAV2, in
 
 Make sure you have ROS2 Humble installed. You can follow the official installation instructions here.
 
-**Clone this repository into your ROS2 workspace:**
+**Clone this repository into your ROS2 workspace and build the packages**
 
 ```bash
-cd /path/to/your/ros2/workspace/src
-git clone <repository_url>
-```
-
-### Build the packages:
-
-```bash
-cd /path/to/your/ros2/workspace
+cd /path/your_ros2_workspace/src
+git clone https://github.com/Shashwat1524/Custom-Robot-navigation-using-NAV2-and-ROS2-Humble.git .
+cd ..
 colcon build
 ```
 
