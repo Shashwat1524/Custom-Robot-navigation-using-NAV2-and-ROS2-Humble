@@ -14,15 +14,7 @@ git clone https://github.com/Shashwat1524/Custom-Robot-navigation-using-NAV2-and
 cd ..
 colcon build
 ```
-
-#### Packages
-**my_robot_description**
-
-Contains the URDF description of the robot.
-**my_robot_bringup**
-
-Contains launch files for launching the robot in a Gazebo environment along with a custom world.
-Getting Started
+## Usage
 
 ### Launch the robot in the Gazebo environment:
 ```bash
@@ -78,7 +70,6 @@ This command launches NAV2 for navigation, providing it with the previously gene
 
 Subscribe to the map topic in RViz to visualize the map.
 
-## Usage
-
+## Navigating the Robot
 Use 2D pose estimator and 2D goal pose in RViz for navigation.
-Alternatively, utilize nav2_test.py to set the current and target poses, then run the Python script.
+Alternatively, utilize **nav2_test.py** to set the current and target poses, then run the Python script.
