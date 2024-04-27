@@ -6,19 +6,19 @@ This project demonstrates custom robot navigation using ROS2 Humble and NAV2, in
 
 Make sure you have ROS2 Humble installed. You can follow the official installation instructions here.
 
-Clone this repository into your ROS2 workspace:
+**Clone this repository into your ROS2 workspace:**
 
-'''
+'''bash
 cd /path/to/your/ros2/workspace/src
 git clone <repository_url>
 '''
 
 ### Build the packages:
 
-bash
-
-    cd /path/to/your/ros2/workspace
-    colcon build
+'''bash
+cd /path/to/your/ros2/workspace
+colcon build
+'''
 
 #### Packages
 **my_robot_description**
@@ -30,55 +30,57 @@ Contains launch files for launching the robot in a Gazebo environment along with
 Getting Started
 
 ### Launch the robot in the Gazebo environment:
-
+'''bash
 ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
+'''
 
 This command launches the robot in Gazebo with the specified world.
 
 ### Launch NAV2 for navigation:
 
-go
+'''bash
 
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True
+'''
 
 This command launches NAV2, allowing the robot to perform mapping, localization, and path planning.
 
 ### Launch SLAM for mapping:
 
-go
+'''bash
 
 ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
+'''
 
 This command initiates SLAM, enabling the robot to create a map of its environment as it moves.
 
-Control the robot using TurtleBot3 teleop:
+### Control the robot using TurtleBot3 teleop:
 
-arduino
-
+'''bash
 ros2 run turtlebot3_teleop teleop_keyboard
+'''
 
 This command allows you to control the robot's movements using keyboard inputs.
 
 ### Open RViz to visualize the map:
-
-rviz2
-
-RViz is a visualization tool for ROS that allows you to visualize the robot's sensor data and navigation information.
+'''bash
+rviz2 rviz2
+'''
 
 Add map and TFs to RViz to view the map being formed as you maneuver the robot.
 
 ### Save the map:
 
-arduino
-
+'''bash
 ros2 run nav2_map_server map_saver_cli -f maps/my_map_world
+'''
 
 This command saves the generated map to a file. Replace my_map_world with the desired file name.
 
 ### Launch navigation:
-
-ros2 launch nav2_bringup bringup_launch.py use_sim_time:=True map:=maps/first.yaml
-
+'''bash
+ros2 launch nav2_bringup bringup_launch.py use_sim_time:=True map:=maps/my_map_world.yaml
+'''
 This command launches NAV2 for navigation, providing it with the previously generated map.
 
 Subscribe to the map topic in RViz to visualize the map.
