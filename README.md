@@ -4,7 +4,11 @@
 This project demonstrates custom robot navigation using ROS2 Humble and NAV2, incorporating SLAM for mapping and path planning. The robot utilizes Lidar sensor technology for accurate environmental perception.
 ## Installation
 
-Make sure you have ROS2 Humble installed. You can follow the official installation instructions here.
+Make sure you have ROS2 Humble installed. You can follow the official installation instructions at https://docs.ros.org/en/humble/Installation.html
+
+Install NAV2 for ROS2. You can follow the installation instructions  at https://navigation.ros.org/
+
+Install SLAM Toolbox for ROS2. You can follow the installation instructions at https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html
 
 **Clone this repository into your ROS2 workspace and build the packages**
 
